@@ -1,0 +1,30 @@
+{
+  "name": "@dub/zod",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dub/prisma": "*",
+    "@dub/utils": "*",
+    "@sindresorhus/slugify": "^2.2.1",
+    "file-type": "^18.5.0",
+    "zod": "^3.22.4",
+    "zod-openapi": "^4.2.4"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.1",
+    "typescript": "^5.2.2"
+  }
+}

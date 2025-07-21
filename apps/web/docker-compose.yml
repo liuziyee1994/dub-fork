@@ -15,7 +15,7 @@ services:
         "--default-authentication-plugin=mysql_native_password",
       ]
     ports:
-      - 3306:3306
+      - 3366:3306
     volumes:
       - ps-mysql:/var/lib/mysql
 
@@ -34,12 +34,6 @@ services:
       - 3900:3900
     links:
       - ps-mysql
-
-  mailhog:
-    image: "mailhog/mailhog:latest"
-    ports:
-      - "1025:1025"
-      - "8025:8025"
 
 volumes:
   ps-mysql:

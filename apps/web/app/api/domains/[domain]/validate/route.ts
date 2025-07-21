@@ -3,6 +3,7 @@ import { withSession } from "@/lib/auth";
 import dns from "dns/promises";
 import { NextResponse } from "next/server";
 
+// todo: me api check domain
 // GET /api/domains/[domain]/valdiate – check if a domain is valid
 export const GET = withSession(async ({ params }) => {
   const { domain } = params;
